@@ -44,7 +44,7 @@ function changeSlide(n) {
     }
     slides[slideIndex - 1].style.display = 'block';
 }
-
+if(slides && slides.length>0)
 showSlides();
 // Testimonial Slider
 let currentTestimonial = 0;
@@ -62,8 +62,12 @@ function showNextTestimonial() {
 }
 
 // Automatically change testimonials every 3 seconds
+if(testimonials && testimonials>0)
 setInterval(showNextTestimonial, 3000);
-document.querySelector('form').addEventListener('submit', function(event) {
+
+let form=document.querySelector('form')
+if (form)
+form.addEventListener('submit', function(event) {
     alert('Form submition through mail, We will get back to you soon.');
 });
 // Preloader script

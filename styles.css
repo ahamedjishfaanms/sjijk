@@ -258,7 +258,7 @@ header {
 }
 
 .about-text p {
-    color: #333;
+    color: #000000;
     line-height: 1.6;
 }
 
@@ -631,6 +631,95 @@ header {
     color: var(--secondary-color);
 }
 
+/* About Us Section */
+.about-us {
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.about-text h1 {
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #ddd;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* Objective and Goals Section */
+.objective-goals {
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.objective, .goals {
+    background: rgba(255, 255, 255, 0.8); /* White with small transparency */
+    color: #000; /* Black text */
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.objective h2, .goals h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.objective p, .goals ul {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.goals ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* Fade Animation */
 .fade {
@@ -788,5 +877,55 @@ footer {
         text-align: center;
         width: 100%;
     }
+    @media (max-width: 768px) {
+        .about-container {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .about-image {
+            margin-bottom: 20px;
+        }
+    
+        .about-text {
+            padding-left: 0;
+        }
+    }
+    /* Responsive Design */
+@media (max-width: 768px) {
+    .objective-goals {
+        padding: 50px 10px;
+    }
+
+    .objective, .goals {
+        padding: 30px;
+    }
+
+    .objective h2, .goals h2 {
+        font-size: 28px;
+    }
+
+    .objective p, .goals ul {
+        font-size: 16px;
+    }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .objective-goals {
+        padding: 50px 10px;
+    }
+
+    .objective, .goals {
+        padding: 30px;
+    }
+
+    .objective h2, .goals h2 {
+        font-size: 28px;
+    }
+
+    .objective p, .goals ul {
+        font-size: 16px;
+    }
+}
     
 }

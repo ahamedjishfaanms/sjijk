@@ -44,8 +44,10 @@ function changeSlide(n) {
     }
     slides[slideIndex - 1].style.display = 'block';
 }
-if(slides && slides.length>0)
-showSlides();
+if (slides && slides.length > 0) {
+    showSlides();
+}
+
 // Testimonial Slider
 let currentTestimonial = 0;
 const testimonials = document.querySelectorAll('.testimonial');
@@ -62,16 +64,21 @@ function showNextTestimonial() {
 }
 
 // Automatically change testimonials every 3 seconds
-if(testimonials && testimonials>0)
-setInterval(showNextTestimonial, 3000);
+if (testimonials && testimonials.length > 0) {
+    setInterval(showNextTestimonial, 3000);
+}
 
-let form=document.querySelector('form')
-if (form)
-form.addEventListener('submit', function(event) {
-    alert('Form submition through mail, We will get back to you soon.');
-});
+let form = document.querySelector('form');
+if (form) {
+    form.addEventListener('submit', function(event) {
+        alert('Form submission through mail, We will get back to you soon.');
+    });
+}
+
 // Preloader script
 window.addEventListener('load', function() {
     const preloader = document.getElementById('preloader');
-    preloader.style.display = 'none';
+    if (preloader) {
+        preloader.style.display = 'none';
+    }
 });

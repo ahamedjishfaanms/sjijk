@@ -48,6 +48,19 @@ if (slides && slides.length > 0) {
     showSlides();
 }
 
+const announcementMarquee = document.getElementById('announcementMarquee');
+
+if (announcementMarquee) {
+    announcementMarquee.addEventListener('mouseenter', () => {
+        announcementMarquee.stop();  // Stop marquee on hover
+    });
+
+    announcementMarquee.addEventListener('mouseleave', () => {
+        announcementMarquee.start();  // Resume marquee when hover ends
+    });
+}
+
+
 // Testimonial Slider
 let currentTestimonial = 0;
 const testimonials = document.querySelectorAll('.testimonial');
